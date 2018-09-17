@@ -13,15 +13,15 @@ describe('AppComponent', () => {
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
   }));
-  it(`should have as title 'getting-ready-for-ng6'`, async(() => {
+  it(`should have as title 'NG6 Super Awesome App'`, async(() => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('getting-ready-for-ng6');
+    expect(app.title).toEqual('NG6 Super Awesome App');
   }));
   it('should render title in a h1 tag', async(() => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to getting-ready-for-ng6!');
+    expect(compiled.querySelector('h1').textContent).toContain('NG6 Super Awesome App');
   }));
 });
