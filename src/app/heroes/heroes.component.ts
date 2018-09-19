@@ -20,7 +20,7 @@ export class HeroesComponent implements OnInit {
 
   onSelect(hero: Hero): void {
     this.selectedHero = hero;
-    alert(this.selectedHero.name);
+    alert(`You just clicked on *${this.selectedHero.name}* hero`);
   }
 
   getHeroes(): void {
