@@ -24,11 +24,13 @@ export class HeroDetailComponent implements OnInit {
   }
 
   getHero(): void {
-    console.log(this.route.snapshot);
-    const slug = this.route.snapshot.paramMap.get('slug');
-    // TODO: try using property hero, and get ID, SLUG and NAME from there
-    this.heroService.getHero(slug)
+    const id = +this.route.snapshot.paramMap.get('id');
+    this.heroService.getHero(id)
       .subscribe(hero => this.hero = hero);
+  }
+
+  goBack(): void {
+    this.location.back();
   }
 
 }
